@@ -1,22 +1,43 @@
 \documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
 
 \begin{document}
-コンピュータゼミ 2018 宿題
-1章
+\begin{center}
+{\large コンピュータゼミ 2018 宿題}
+\end{center}
+\section{\large １章}
 私達の研究室では主にシステムやソフトウェアの信頼性に関する研究を行っています。主にそれらを確率論によってモデル化し、解析することで信頼性の評価を行います。
+
 具体的には以下のような確率過程を用いることが多いです。
-NHPP
-CTMC
-2章
-卒業論文や原稿の作成の際にはLaTeXを使って文書を作成します。LaTeXは数式などを含むような文章を綺麗に作成するための言語です。
-3章
-確率変数 $x$ が指数分布に従う時、その分布関数と密度関数は、
+\begin{itemize}
+ \item NHPP
+ \item CTMC
+\end{itemize}
+\section{\large ２章}
+卒業論文や原稿の作成のさいには \LaTeX を使って文書を作成します。 \LaTeX は数式などを含むような文章を綺麗に作成するための言語です。
+\section{\large ３章}
+確率変数 $X$ が指数分布に従う時、その分布関数$F_X(t)$と密度関数$f_X(t)$は、
 
+\begin{align}
+F_X(t)  &=  1-e^{-\lambda t} \label{F_X} \\
+f_X(t)  &=  \lambda e^{-\lambda t} \label{f_X}
+\end{align}
+となる。またその期待値は定義より、
 
-隣る。またその期待値は定義より、
-
+\begin{align}
+E[X] &=  \int^\infty _0 tf_X (t)dt \nonumber\\
+&=  [(1-e^{-\lambda t})t]^\infty _0 - \int^\infty _0 (1-e^{-\lambda t})dt \nonumber\\
+&=  [(1-e^{-\lambda t})t]^\infty _0 - [t+ \frac{1}{\lambda} e^{-\lambda t}]^\infty _0 \nonumber\\
+&=  \frac{1}{\lambda} \label{E_X}
+\end{align}
 となる。(extra 宿題: 式(3)を導出してみよう ヒント: 部分積分)
-4章
-表を作ることもできます
 
+\section{\large ４章}
+表をつくることもできます
+\begin{center}
+\begin{tabular}{|c|c|c|}\hline
+ 1 & 2 & 3 \\\hline
+ \alpha & \beta & \gamma \\\hline
+\end{tabular}
+\end{center}
 \end{document}
